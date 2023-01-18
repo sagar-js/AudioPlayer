@@ -1,0 +1,61 @@
+<mat-toolbar id="header">
+  <button mat-icon-button matTooltip="Accent">
+    <mat-icon color="warn">home</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="Accent" color="warn"
+    aria-label="Example icon-button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button>
+    <i (click)="openInsta()" class="fa fa-instagram" style="color:red"></i>
+  </button>
+  <h3><strong>Music Pod</strong></h3>
+</mat-toolbar>
+
+<mat-toolbar id="profile">
+  <!-- <mat-icon color="warn"> music_note </mat-icon> -->
+</mat-toolbar>
+<!-- <div id="slider"> -->
+<mat-slider min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)"
+  [disabled]="state?.error || currentFile.index === undefined">
+  
+</mat-slider>
+<!-- </div> -->
+<mat-list id="mat_list">
+  <div>
+    <!-- <mat-icon>library_music</mat-icon> -->
+    <div id="button_div">
+      <button mat-raised-button color="warn" (click)="marathi()" id="first"> Marathi </button>
+      <button mat-raised-button color="warn" (click)="southindian()"> SouthIndian </button>
+      <button mat-raised-button color="warn" (click)="punjabi()" id="middle"> Punjabi </button>
+      <button mat-raised-button color="warn" (click)="bollywood()"> Bollywood </button>
+    </div>
+    <div class="slidedot">
+      <a href="#first"></a>
+      <a href="#middle"></a>
+      <a href="#last"></a>
+    </div>
+
+    <div id="list_div">
+      <mat-list-item *ngFor="let file of files; let i = index" (click)="openFile(file, i)">
+        <mat-icon color="accent" mat-list-icon>music_note</mat-icon>
+        <li mat-line>{{file.name}}</li>
+        <h5 mat-line>{{file.artist}}</h5>
+        <mat-icon *ngIf="currentFile.index === i && !state?.error" color="accent">volume_up</mat-icon>
+        <h6 *ngIf="currentFile.index === i && state?.error">ERROR</h6>
+        <img src="{{file.img}}" alt="">
+      </mat-list-item>
+    </div>
+
+    <mat-toolbar-row>
+      <!--[disabled]="isFirstPlaying()"-->
+      <mat-icon (click)="previous()" mat-list-icon> skip_previous </mat-icon>
+      <!--[disabled]="state?.error"-->
+      <mat-icon (click)="play()" *ngIf="!state?.playing" mat-list-icon>play_circle</mat-icon>
+      <mat-icon (click)="pause()" *ngIf="state?.playing" mat-list-icon>pause</mat-icon>
+      <!--[disabled]="isLastplaying()"-->
+      <mat-icon (click)="next()" mat-list-icon>skip_next</mat-icon>
+      <sup>{{state?.readableCurrentTime}}</sup>
+    </mat-toolbar-row>
+  </div>
+</mat-list>

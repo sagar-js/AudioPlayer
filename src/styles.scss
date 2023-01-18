@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    min-width: 100%;
+    max-width: 100%;
+    height: fit-content;
+}
+
+body {
+    max-height: fit-content;
+    max-height: 100%;
+    width: 100%;
+    margin: 0;
+    // background-color: rgb(65, 64, 64);
+    background-image: url('http://papers.co/wallpaper/papers.co-sa52-blurred-white-blur-wallpaper-41-iphone-wallpaper.jpg');
+    background-size: cover; //changed
+    background-repeat: no-repeat; //changed
+    background-attachment: fixed; //changed
+    background-blend-mode: multiply;
+}

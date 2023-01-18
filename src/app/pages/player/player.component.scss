@@ -1,0 +1,235 @@
+// height declartion
+#header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 5vh;
+    background: transparent;
+    border-top-left-radius: 2.5vh;
+    border-top-right-radius: 2.5vh;
+
+    button {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+
+        .mat-icon {
+            font-size: 4vh;
+        }
+
+        i {
+            margin: 0 3vw;
+            font-size: 3vh;
+        }
+    }
+
+    h3 {
+        width: 60vw;
+        font-family: cursive;
+        justify-content: flex-start;
+        color: rgb(253, 248, 245);
+    }
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    background-image: url('https://wallpapercave.com/wp/wp7293879.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: profileimg 4s infinite;
+    transform: scale(0.85); //changed
+    border-radius: 2vh; //changed
+
+    .mat-icon {
+        font-size: 5vh;
+        margin-left: -1vh;
+    }
+}
+
+#profile:hover {
+    animation: kmfdkl;
+}
+
+@keyframes profileimg {
+    10% {
+        background-image: url('https://is2-ssl.mzstatic.com/image/thumb/Purple125/v4/7f/42/90/7f429083-f1ae-0515-6085-74b04e4687f8/source/512x512bb.jpg');
+    }
+
+    20% {
+        background-image: url('https://is4-ssl.mzstatic.com/image/thumb/Purple62/v4/3e/67/73/3e6773b0-5359-acfd-0521-fe567ec24ece/source/512x512bb.jpg');
+    }
+
+    30% {
+        background-image: url('https://9to5mac.com/wp-content/uploads/sites/6/2020/12/Apple-Music-apps.jpg?quality=82&strip=all');
+    }
+
+    40% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBfU0KO32V_2jDFCOn7xyHW6U_cMG7wc4R7A&usqp=CAU');
+    }
+
+    50% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG9oqbhv7vnbL6CAYxoVvjdK-GYBZhv_In4w&usqp=CAU');
+    }
+
+    60% {
+        background-image: url('https://wallpaperaccess.com/full/3299012.jpg');
+    }
+
+    70% {
+        background-image: url('https://cdn.shopify.com/app-store/listing_images/119e46d40447b213e034117eaa5a9382/promotional_image/COWIj4vg2foCEAE=.jpeg?height=900&quality=90&width=1600');
+    }
+
+    80% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjHXFDH2xQJ-lh1-jbodwlo6goRitm0BOBGA&usqp=CAU');
+    }
+
+    90% {
+        background-image: url('https://images.pexels.com/photos/164853/pexels-photo-164853.jpeg?cs=srgb&dl=pexels-pixabay-164853.jpg&fm=jpg');
+    }
+
+    100% {
+        background-image: url('https://wallpapercave.com/wp/wp7293879.png');
+    }
+}
+
+.mat-slider {
+    position: absolute;
+    width: 100vw;
+    top: 76vh;
+    z-index: 100;
+}
+
+#mat_list {
+    height: 55vh;
+    border-radius: 2vh;
+    transform: scale(0.8);
+
+    .slidedot {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            margin: 0 4vw;
+            height: 0.7vh;
+            width: 0.7vh;
+            border-radius: 50%;
+            background-color: white;
+        }
+    }
+}
+
+// mat-toolbar
+.mat-toolbar {
+    display: flex;
+    flex-direction: column;
+}
+
+// matlist
+.mat-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin-top: -4vh;
+
+    h3 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(6, 5, 5);
+        font-weight: bold;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column; //row
+        max-width: 100%;
+        transition: 1s;
+
+        .mat-icon {
+            font-size: 4vh;
+            color: rgb(251, 35, 6);
+        }
+
+        .mat-toolbar-row {
+            position: absolute;
+            top: 60vh;
+            margin-left: 1vw;
+
+            .mat-icon {
+                margin: 0 10vw;
+                font-size: 8vh;
+            }
+
+            sup {
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 5vw;
+                padding: 0 2vw;
+            }
+        }
+
+        #button_div {
+            display: flex;
+            flex-direction: row;
+            transform: scale(0.8);
+            overflow: auto;
+            transition: 1s
+        }
+
+        #list_div {
+            display: flex; //added
+            flex-direction: column; //added
+            width: 100vw; //70
+            height: 52vh; //49
+            overflow: auto;
+            transform: scale(0.95);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            button {
+                min-width: 30vw;
+                margin: 1vh 5vw;
+                padding: 0 1vh;
+                transition: 2s;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: rgb(253, 253, 253);
+                font-size: 2vh;
+                background-image: linear-gradient(rgb(248, 32, 21), rgb(250, 134, 9));
+            }
+
+            .mat-list-item {
+                min-width: 100vw; //added
+                color: white;
+                background-color: white;
+                color: rgb(67, 66, 66);
+                transition: 1s;
+                margin: 2vh 0;
+                border-radius: 2vh;
+
+                img {
+                    height: 7vh;
+                    width: 20vw;
+                    border-radius: 1vh;
+                }
+            }
+
+            .mat-list-item:hover {
+                color: black;
+                font-family: cursive;
+                font-weight: bold;
+                background-image: url('http://papers.co/wallpaper/papers.co-sa52-blurred-white-blur-wallpaper-41-iphone-wallpaper.jpg');
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
